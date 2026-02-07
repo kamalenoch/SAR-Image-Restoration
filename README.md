@@ -4,7 +4,7 @@ This repository contains the implementation of a hybrid framework for Synthetic 
 
 This codebase is designed for high-performance SAR image analysis, likely in the context of research submissions (e.g., IEEE Access).
 
-## 🚀 Features
+## Features
 
 *   **Hybrid Preprocessing**: Utilizes Wavelet transforms to decompose SAR images and reduce initial speckle noise.
 *   **Deep Learning Model**: Implements a custom **LightweightCNN** optimized for efficient image restoration.
@@ -15,7 +15,7 @@ This codebase is designed for high-performance SAR image analysis, likely in the
     *   **ENL** (Equivalent Number of Looks)
     *   **Runtime** & **Parameter Count** analysis
 
-## 📂 Project Structure
+## Project Structure
 
 ```
 ├── data/               # Data loading scripts and raw SAR imagery
@@ -28,7 +28,7 @@ This codebase is designed for high-performance SAR image analysis, likely in the
 └── main.py             # Main entry point to run the full pipeline
 ```
 
-## 🛠️ Installation
+## Installation
 
 1.  **Clone the repository**:
     ```bash
@@ -42,7 +42,7 @@ This codebase is designed for high-performance SAR image analysis, likely in the
     pip install torch numpy scipy scikit-image
     ```
 
-## ⚡ Usage
+## Usage
 
 To run the complete pipeline (Load -> Denoise -> Detect -> Evaluate), execute the main script:
 
@@ -57,7 +57,7 @@ python main.py
 4.  **Detection**: **CA-CFAR** is applied to the output to detect potential targets.
 5.  **Output**: Quality metrics (PSNR, SSIM, ENL) and detection counts are printed.
 
-## 🧠 Methodology
+## Methodology
 
 ### Lightweight CNN
 The core model is a streamlined Convolutional Neural Network designed to balance performance with computational efficiency. It consists of multiple convolutional layers with ReLU activation, progressively refining features to output a clean SAR image.
@@ -65,7 +65,7 @@ The core model is a streamlined Convolutional Neural Network designed to balance
 ### CA-CFAR
 The Cell-Averaging CFAR detector is used to adaptively set thresholds based on background noise levels, making it effective for varying SAR environments.
 
-## 📊 Metrics
+## Metrics
 
 The project evaluates performance using:
 *   **Visual Quality**: PSNR & SSIM
